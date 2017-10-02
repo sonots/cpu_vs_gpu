@@ -83,14 +83,14 @@ __global__ void sumArraysOnGPU(float *A, float *B, float *C)
 
 int main(int argc, char **argv)
 {
-    printf("%s Starting...\n", argv[0]);
+    //printf("%s Starting...\n", argv[0]);
 
     // set up device
     int dev = 0;
     CHECK(cudaSetDevice(dev));
 
     // set up data size of vectors
-    int nElem = 1024 * 100;
+    int nElem = 1024 * 1024 * 10;
     printf("Vector size %d\n", nElem);
 
     // malloc host memory
@@ -127,7 +127,7 @@ int main(int argc, char **argv)
     double started = seconds();
     sumArraysOnGPU<<<grid, block>>>(d_A, d_B, d_C);
     cudaDeviceSynchronize();
-    printf("Execution configure <<<%d, %d>>>\n", grid.x, block.x);
+    //printf("Execution configure <<<%d, %d>>>\n", grid.x, block.x);
     double elapsed = seconds() - started;
     printf("Elapsed %lf\n", elapsed);
 

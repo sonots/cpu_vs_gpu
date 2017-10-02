@@ -29,7 +29,7 @@ void vec_add(const size_t n, float *z, const float *x, const float *y){
 }
 
 int main(void){
-  const size_t n = 1024 * 100;
+  const size_t n = 1024 * 1024 * 10;
   float *x, *y, *z;
   printf("Vector size %d\n", (int)n);
 

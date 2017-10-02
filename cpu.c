@@ -41,7 +41,7 @@ void initialData(float *ip, int size)
 
 int main(int argc, char **argv)
 {
-    int nElem = 1024 * 100;
+    int nElem = 1024 * 1024 * 10;
     printf("Vector size %d\n", nElem);
     size_t nBytes = nElem * sizeof(float);
 
