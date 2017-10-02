@@ -16,9 +16,9 @@ GeForce GTX TITAN X
 # Result
 
 ```
-$ ./cpu
+$ ./cpu # 1 core
 Elapsed 0.000459
-$ ./simd
+$ ./simd # 1 core
 Elapsed 0.000102
 $ ./gpu
 Elapsed 0.000066
